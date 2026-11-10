@@ -3,7 +3,6 @@ import 'package:yha/core/theme/app_colors.dart';
 import 'package:yha/core/utils/image_url.dart';
 import 'package:yha/features/courses/data/models/course_model.dart';
 import 'package:yha/shared/widgets/network_image_placeholder.dart';
-import 'package:yha/shared/widgets/price_display.dart';
 
 class FeaturedCourseCard extends StatelessWidget {
   const FeaturedCourseCard({super.key, required this.course, required this.onTap});

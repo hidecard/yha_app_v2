@@ -187,7 +187,7 @@ class _SectionHeader extends StatelessWidget {
         ),
         const SizedBox(width: 10),
         Expanded(child: Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: AppColors.textPrimary))),
-        if (action != null) action!,
+        ?action,
       ],
     );
   }
