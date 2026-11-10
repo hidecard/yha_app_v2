@@ -21,6 +21,7 @@ class MainShellScreen extends StatelessWidget {
       _NavItemData(icon: Icons.school_outlined, activeIcon: Icons.school_rounded, label: 'Courses'),
       _NavItemData(icon: Icons.folder_outlined, activeIcon: Icons.folder_rounded, label: 'Projects'),
       _NavItemData(icon: Icons.info_outline, activeIcon: Icons.info_rounded, label: 'About'),
+      _NavItemData(icon: Icons.person_outline_rounded, activeIcon: Icons.person_rounded, label: 'Profile'),
     ];
 
     return Scaffold(

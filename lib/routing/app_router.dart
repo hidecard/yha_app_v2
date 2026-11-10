@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:yha/features/about/presentation/screens/about_screen.dart';
+import 'package:yha/features/auth/presentation/screens/profile_screen.dart';
+import 'package:yha/features/auth/presentation/screens/student_login_screen.dart';
 import 'package:yha/features/course_detail/presentation/screens/course_detail_screen.dart';
 import 'package:yha/features/courses/presentation/screens/courses_screen.dart';
 import 'package:yha/features/home/presentation/screens/home_screen.dart';
@@ -16,6 +18,11 @@ GoRouter createRouter() {
     navigatorKey: _rootNavigatorKey,
     initialLocation: '/',
     routes: [
+      GoRoute(
+        path: '/login',
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const StudentLoginScreen(),
+      ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) =>
             MainShellScreen(navigationShell: navigationShell),
@@ -68,6 +75,12 @@ GoRouter createRouter() {
             GoRoute(
               path: '/about',
               builder: (context, state) => const AboutScreen(),
+            ),
+          ]),
+          StatefulShellBranch(routes: [
+            GoRoute(
+              path: '/profile',
+              builder: (context, state) => const ProfileScreen(),
             ),
           ]),
         ],
